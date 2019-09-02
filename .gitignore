@@ -1,12 +1,18 @@
+# Maven 的打包输出工具,会自动生成,无需上传
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
 
-# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
-!/.mvn/wrapper/maven-wrapper.jar
+# IDEA 开发工具的项目配置文件,会自动生成,无需上传
+.idea
+*.iml
+
+# 数据库配置文件
+/**/resources/hibernate/db.properties
+
+# Mac 系统的文件管理文件
+*.DS_Store
+
+# VSCode生成的配置文件
+.settings
+
+# 不知道什么玩意儿
+bin/
