@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+  <description>Spring Configuration of Dispatcher</description>
+
+  <!-- 此配置文件是配置需要扫描的控制层类 -->
+  <context:component-scan base-package="com.ninggc.morphiademo.morphia.web"/>
+
+  <!-- 指定数据源的配置文件,此处指定了2个配置文件,分别指定数据库的连接信息和 Hibernate 数据源的配置信息 -->
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+      <list>
+        <value>classpath:collect/collect.properties</value>
+        <value>classpath:morphia/morphia.properties</value>
+      </list>
+    </property>
+  </bean>
+
+
+</beans>

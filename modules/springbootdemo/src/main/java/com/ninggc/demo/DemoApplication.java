@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 @ImportResource(locations = {"classpath:provider.xml"})
 public class DemoApplication {
 
-	@GetMapping("/a")
-	public String test() {
-		return "test";
-	}
+    @GetMapping("/a")
+    public String test() {
+        return "test";
+    }
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+    }
 
 }
