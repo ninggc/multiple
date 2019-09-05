@@ -2,8 +2,9 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 指定数据源的配置文件,此处指定了2个配置文件,分别指定数据库的连接信息和 Hibernate 数据源的配置信息 -->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -15,5 +16,7 @@
             </list>
         </property>
     </bean>
+
+    <context:component-scan base-package="com.ninggc.morphiademo"/>
 
 </beans>

@@ -19,7 +19,7 @@ public class DemoApplication {
     private ConfigurableApplicationContext context;
 
     @GetMapping("")
-    public Map<String, Object> test() throws NoSuchFieldException {
+    public Map<String, Object> test() {
         Map<String, Object> nameType = new HashMap<>();
         Map<String, Object> nameBean = new HashMap<>();
         String[] names = context.getBeanDefinitionNames();
