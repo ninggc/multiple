@@ -12,7 +12,7 @@ public class DubbodemoApplication {
 
 	@GetMapping("")
 	public String app() {
-	    return "app";
+	    return "DubbodemoApplication";
 	}
 
 	public static void main(String[] args) {
