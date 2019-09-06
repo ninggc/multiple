@@ -17,6 +17,6 @@
         </property>
     </bean>
 
-    <context:component-scan base-package="com.ninggc.morphiademo"/>
+    <context:component-scan base-package="com.ninggc.demo.morphiademo"/>
 
 </beans>

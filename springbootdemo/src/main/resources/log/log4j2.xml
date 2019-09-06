@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="OFF" monitorInterval="300">
+
+  <properties>
+    <property name="log_home">/logs/multiple</property>
+  </properties>
+
+  <appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] %-5level %logger{36} - %msg%n}{FATAL=magenta, ERROR=red, WARN=blue, INFO=black, DEBUG=green, TRACE=white}"/>
+    </Console>
+
+    <RollingFile name="RollingFileTrack" fileName="${log_home}/track.log"
+                 filePattern="${log_home}/track.%d{yyyy-MM-dd}-%i.log" append="true">
+      <PatternLayout pattern="%highlight{[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] %-5level %logger{36} - %msg%n}{FATAL=magenta, ERROR=red, WARN=blue, INFO=black, DEBUG=green, TRACE=white}"/>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="1 MB"/>
+        <TimeBasedTriggeringPolicy/>
+      </Policies>
+      <Filters>
+        <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+      </Filters>
+    </RollingFile>
+  </appenders>
+
+  <loggers>
+    <logger name="org.hibernate.orm.deprecation" level="error"/>
+
+    <root level="info">
+<!--      <appender-ref ref="Console"/>-->
+      <appender-ref ref="RollingFileTrack"/>
+    </root>
+  </loggers>
+</Configuration>

@@ -1,6 +1,7 @@
 package com.ninggc.demo;
 
-import com.ninggc.listener.TestEvent;
+import com.ninggc.demo.listener.TestEvent;
+import com.ninggc.demo.service.TestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,18 +10,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
 @WebAppConfiguration
 public class DemoApplicationTest {
 
     @Autowired
-    ApplicationContext context;
+    TestService testService;
 
     @Test
     public void test1() {
-        context.publishEvent(new TestEvent(context));
+        testService.test();
     }
 }

@@ -1,6 +1,6 @@
 package com.ninggc.demo;
 
-import com.ninggc.entity.User;
+import com.ninggc.demo.entity.User;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
