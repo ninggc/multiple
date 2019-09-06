@@ -31,27 +31,20 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>dev.morphia.morphia</groupId>
             <artifactId>core</artifactId>
             <version>1.5.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.3.6.Final</version>
         </dependency>
         <dependency>
             <groupId>com.wondersgroup.bigdata</groupId>
             <artifactId>commons-hibernate-base</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.1.9.RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-        <!--    morphia依赖e-->
     </dependencies>
 
     <build>

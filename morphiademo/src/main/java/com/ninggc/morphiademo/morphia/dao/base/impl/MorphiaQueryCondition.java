@@ -2,11 +2,11 @@ package com.ninggc.morphiademo.morphia.dao.base.impl;
 
 import com.ninggc.morphiademo.morphia.util.DeleteEnum;
 import com.ninggc.morphiademo.morphia.dao.base.AbstractQueryCondition;
+import com.ninggc.morphiademo.morphia.util.MorphiaMatchMode;
 import dev.morphia.query.Criteria;
 import dev.morphia.query.CriteriaContainer;
 import dev.morphia.query.Query;
 import dev.morphia.query.Sort;
-import org.hibernate.criterion.MatchMode;
 
 import java.util.*;
 
@@ -31,7 +31,7 @@ public class MorphiaQueryCondition extends AbstractQueryCondition {
     }
 
     public void addEqKeyContent(String key, String content) {
-        addLikeKeyContent(key, content, MatchMode.EXACT);
+        addLikeKeyContent(key, content, MorphiaMatchMode.EXACT);
     }
 
     /**
@@ -41,7 +41,7 @@ public class MorphiaQueryCondition extends AbstractQueryCondition {
      * @param content
      * @param matchMode
      */
-    public void addLikeKeyContent(String key, String content, MatchMode matchMode) {
+    public void addLikeKeyContent(String key, String content, MorphiaMatchMode matchMode) {
         keyContent = keyContent == null ? new HashMap<>() : keyContent;
         keyContent.put("map." + key, new Object[]{content, matchMode});
     }
@@ -141,13 +141,13 @@ public class MorphiaQueryCondition extends AbstractQueryCondition {
                 String columnName = query.getKey();
                 Object[] param = query.getValue();
                 CriteriaContainer container = null;
-                if (MatchMode.ANYWHERE.equals(param[1])) {
+                if (MorphiaMatchMode.ANYWHERE.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).contains((String) param[0]);
-                } else if (MatchMode.START.equals(param[1])) {
+                } else if (MorphiaMatchMode.START.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).startsWith((String) param[0]);
-                } else if (MatchMode.END.equals(param[1])) {
+                } else if (MorphiaMatchMode.END.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).endsWith((String) param[0]);
-                } else if (MatchMode.EXACT.equals(param[1])) {
+                } else if (MorphiaMatchMode.EXACT.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).equal((String) param[0]);
                 }
                 criterionList.add(container);
@@ -159,13 +159,13 @@ public class MorphiaQueryCondition extends AbstractQueryCondition {
                 String columnName = query.getKey();
                 Object[] param = query.getValue();
                 CriteriaContainer container = null;
-                if (MatchMode.ANYWHERE.equals(param[1])) {
+                if (MorphiaMatchMode.ANYWHERE.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).containsIgnoreCase((String) param[0]);
-                } else if (MatchMode.START.equals(param[1])) {
+                } else if (MorphiaMatchMode.START.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).startsWithIgnoreCase((String) param[0]);
-                } else if (MatchMode.END.equals(param[1])) {
+                } else if (MorphiaMatchMode.END.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).endsWithIgnoreCase((String) param[0]);
-                } else if (MatchMode.EXACT.equals(param[1])) {
+                } else if (MorphiaMatchMode.EXACT.equals(param[1])) {
                     container = morphiaQuery.criteria(columnName).equalIgnoreCase((String) param[0]);
                 }
                 criterionList.add(container);
@@ -225,13 +225,13 @@ public class MorphiaQueryCondition extends AbstractQueryCondition {
                 if (param == null) {
                     container = morphiaQuery.criteria(key).exists();
                 } else {
-                    if (MatchMode.ANYWHERE.equals(param[1])) {
+                    if (MorphiaMatchMode.ANYWHERE.equals(param[1])) {
                         container = morphiaQuery.criteria(key).contains((String) param[0]);
-                    } else if (MatchMode.START.equals(param[1])) {
+                    } else if (MorphiaMatchMode.START.equals(param[1])) {
                         container = morphiaQuery.criteria(key).startsWith((String) param[0]);
-                    } else if (MatchMode.END.equals(param[1])) {
+                    } else if (MorphiaMatchMode.END.equals(param[1])) {
                         container = morphiaQuery.criteria(key).endsWith((String) param[0]);
-                    } else if (MatchMode.EXACT.equals(param[1])) {
+                    } else if (MorphiaMatchMode.EXACT.equals(param[1])) {
                         container = morphiaQuery.criteria(key).equal((String) param[0]);
                     }
                 }

@@ -1,9 +1,9 @@
 package com.ninggc.morphiademo.morphia.dao.base;
 
+import com.ninggc.morphiademo.morphia.util.MorphiaMatchMode;
 import com.wondersgroup.bigdata.project.query.QueryOrderOptions;
 import dev.morphia.query.CriteriaContainer;
 import dev.morphia.query.Query;
-import org.hibernate.criterion.MatchMode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -188,13 +188,13 @@ public abstract class AbstractQueryCondition {
     /**
      * morphia refactor
      * <br> 添加模糊查询条件
-     * <br> 例：void addLike("user_name","张",MatchMode.ANYWHERE)
+     * <br> 例：void addLike("user_name","张",MorphiaMatchMode.ANYWHERE)
      * <br> 注：查询 user_name 字段中姓 [张] 的记录
      * @param columnName 指定的数据库字段名
      * @param param      查询的参数
      * @param matchMode  匹配模式 现在只支持anywhere、start、end三种
      */
-    public void addLike(String columnName, String param, MatchMode matchMode) {
+    public void addLike(String columnName, String param, MorphiaMatchMode matchMode) {
         Object[] likeParam = new Object[]{param, matchMode};
         if (like == null) {
             Map<String, Object[]> likeCondition = new HashMap<String, Object[]>();
@@ -207,13 +207,13 @@ public abstract class AbstractQueryCondition {
 
     /**
      * <br> 添加模糊查询条件(忽略大小写)
-     * <br> 例：void addILike("user_name","abc",MatchMode.ANYWHERE)
+     * <br> 例：void addILike("user_name","abc",MorphiaMatchMode.ANYWHERE)
      * <br> 注：查询 user_name 字段中含有 [abc] 的记录,由于忽略大小写,可能查出如 efaBC,Abcde,ABC 的记录
      * @param columnName 指定的数据库字段名
      * @param param      查询的参数
      * @param matchMode  匹配模式 现在只支持anywhere、start、end三种
      */
-    public void addILike(String columnName, String param, MatchMode matchMode) {
+    public void addILike(String columnName, String param, MorphiaMatchMode matchMode) {
         Object[] iLikeParam = new Object[]{param, matchMode};
         if (iLike == null) {
             Map<String, Object[]> iLikeCondition = new HashMap<String, Object[]>();
