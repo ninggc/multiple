@@ -20,5 +20,6 @@
         <module>morphiademo</module>
         <module>springbootdemo</module>
         <module>mytomcat</module>
+        <module>jdkdemo</module>
     </modules>
 </project>
