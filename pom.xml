@@ -24,5 +24,6 @@
         <module>my-tomcat</module>
         <module>platform-demo</module>
         <module>spring-boot-demo</module>
+        <module>spring-cloud-demo</module>
     </modules>
 </project>

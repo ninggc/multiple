@@ -3,6 +3,8 @@ package com.ninggc.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,8 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
+@EnableEurekaClient
+@EnableFeignClients
 public class SpringBootDemoApplication implements ApplicationListener<RequestHandledEvent> {
 
     @Autowired
