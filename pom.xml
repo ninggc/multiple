@@ -16,12 +16,13 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>dubbodemo</module>
-        <module>esdemo</module>
-        <module>jdkdemo</module>
-        <module>messagequeuedemo</module>
-        <module>morphiademo</module>
-        <module>mytomcat</module>
-        <module>springbootdemo</module>
+        <module>dubbo-demo</module>
+        <module>es-demo</module>
+        <module>jdk-demo</module>
+        <module>message-queue-demo</module>
+        <module>morphia-demo</module>
+        <module>my-tomcat</module>
+        <module>platform-demo</module>
+        <module>spring-boot-demo</module>
     </modules>
 </project>

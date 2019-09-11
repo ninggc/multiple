@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ninggc</groupId>
-    <artifactId>messagequeuedemo</artifactId>
+    <artifactId>message-queue-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>messagequeuedemo</name>
     <description>Demo project for Spring Boot</description>

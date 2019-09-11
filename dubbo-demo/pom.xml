@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>modules</groupId>
-	<artifactId>dubbodemo</artifactId>
+	<artifactId>dubbo-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dubbodemo</name>
 	<description>Demo project for Spring Boot</description>
