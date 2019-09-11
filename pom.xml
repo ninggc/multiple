@@ -17,9 +17,11 @@
 
     <modules>
         <module>dubbodemo</module>
-        <module>morphiademo</module>
-        <module>springbootdemo</module>
-        <module>mytomcat</module>
+        <module>esdemo</module>
         <module>jdkdemo</module>
+        <module>messagequeuedemo</module>
+        <module>morphiademo</module>
+        <module>mytomcat</module>
+        <module>springbootdemo</module>
     </modules>
 </project>
