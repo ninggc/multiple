@@ -16,8 +16,6 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
-@EnableEurekaClient
-@EnableFeignClients
 public class SpringBootDemoApplication implements ApplicationListener<RequestHandledEvent> {
 
     @Autowired
