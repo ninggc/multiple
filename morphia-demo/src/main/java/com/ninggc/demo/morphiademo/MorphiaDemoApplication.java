@@ -15,10 +15,10 @@ import java.util.Map;
 @ImportResource(locations = {"classpath:spring/applicationContext.xml"})
 @PropertySource("classpath:morphia/morphia.properties")
 @RestController
-public class MorphiademoApplication {
+public class MorphiaDemoApplication {
     private final Environment environment;
 
-    public MorphiademoApplication(Environment environment) {
+    public MorphiaDemoApplication(Environment environment) {
         this.environment = environment;
     }
 
@@ -36,6 +36,6 @@ public class MorphiademoApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(MorphiademoApplication.class, args);
+        SpringApplication.run(MorphiaDemoApplication.class, args);
     }
 }

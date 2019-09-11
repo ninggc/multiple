@@ -14,7 +14,7 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
-public class DemoApplication implements ApplicationListener<RequestHandledEvent> {
+public class SpringBootDemoApplication implements ApplicationListener<RequestHandledEvent> {
 
     @Autowired
     AbstractApplicationContext context;
@@ -43,7 +43,7 @@ public class DemoApplication implements ApplicationListener<RequestHandledEvent>
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(SpringBootDemoApplication.class, args);
     }
 
 }
