@@ -40,11 +40,6 @@
             <artifactId>core</artifactId>
             <version>1.5.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.wondersgroup.bigdata</groupId>
-            <artifactId>commons-hibernate-base</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
