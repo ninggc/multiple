@@ -61,17 +61,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.ninggc</groupId>
-            <artifactId>my-morphia-demo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <!--        <dependency>-->
-<!--            <groupId>com.ninggc.util</groupId>-->
-<!--            <artifactId>morphia</artifactId>-->
-<!--            <version>1.0.0</version>-->
-<!--        </dependency>-->
     </dependencies>
 
     <build>
