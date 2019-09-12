@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ninggc</groupId>
-    <artifactId>platform-demo</artifactId>
+    <artifactId>my-platform-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>platformdemo</name>
+    <name>myplatformdemo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

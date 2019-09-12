@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ninggc</groupId>
-    <artifactId>morphia-demo</artifactId>
+    <artifactId>my-morphia-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>morphiademo</name>
+    <name>mymorphiademo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -20,9 +20,9 @@
         <module>es-demo</module>
         <module>jdk-demo</module>
         <module>message-queue-demo</module>
-        <module>morphia-demo</module>
+        <module>my-morphia-demo</module>
+        <module>my-platform-demo</module>
         <module>my-tomcat</module>
-        <module>platform-demo</module>
         <module>spring-boot-demo</module>
         <module>spring-cloud-client-demo</module>
         <module>spring-cloud-demo</module>
