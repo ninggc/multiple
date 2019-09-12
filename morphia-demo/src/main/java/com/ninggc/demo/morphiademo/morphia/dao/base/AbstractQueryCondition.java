@@ -1,7 +1,7 @@
 package com.ninggc.demo.morphiademo.morphia.dao.base;
 
 import com.ninggc.demo.morphiademo.morphia.util.MorphiaMatchMode;
-import com.wondersgroup.bigdata.project.query.QueryOrderOptions;
+//import com.wondersgroup.bigdata.project.query.QueryOrderOptions;
 import dev.morphia.query.CriteriaContainer;
 import dev.morphia.query.Query;
 
@@ -317,15 +317,15 @@ public abstract class AbstractQueryCondition {
      * @param columnName        指定的数据库字段名
      * @param queryOrderOptions 枚举类型的排序方式
      */
-    public void addOrder(String columnName, QueryOrderOptions queryOrderOptions) {
-        if (order == null) {
-            Map<String, String> orderCondition = new HashMap<String, String>();
-            orderCondition.put(columnName, queryOrderOptions.order());
-            order = orderCondition;
-        } else {
-            order.put(columnName, queryOrderOptions.order());
-        }
-    }
+//    public void addOrder(String columnName, QueryOrderOptions queryOrderOptions) {
+//        if (order == null) {
+//            Map<String, String> orderCondition = new HashMap<String, String>();
+//            orderCondition.put(columnName, queryOrderOptions.order());
+//            order = orderCondition;
+//        } else {
+//            order.put(columnName, queryOrderOptions.order());
+//        }
+//    }
 
     /**
      * <br> 添加指定字段的分组依据
