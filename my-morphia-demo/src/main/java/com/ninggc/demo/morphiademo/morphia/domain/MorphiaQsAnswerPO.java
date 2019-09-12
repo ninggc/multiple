@@ -1,6 +1,7 @@
 package com.ninggc.demo.morphiademo.morphia.domain;
 
-import com.ninggc.demo.morphiademo.morphia.util.DeleteEnum;
+import com.ninggc.util.morphia.domain.IMorphiaPO;
+import com.ninggc.util.morphia.util.DeleteEnum;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
 import dev.morphia.annotations.PrePersist;

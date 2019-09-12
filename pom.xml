@@ -24,7 +24,9 @@
         <module>my-platform-demo</module>
         <module>my-tomcat</module>
         <module>spring-boot-demo</module>
-        <module>spring-cloud-client-demo</module>
-        <module>spring-cloud-demo</module>
+
+        <module>spring-microservice-cloud-demo/spring-config-demo</module>
+        <module>spring-microservice-cloud-demo/micro-discovery-service</module>
+        <module>spring-microservice-cloud-demo/micro-user-service</module>
     </modules>
 </project>

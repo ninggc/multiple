@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
-@RequestMapping("/morphia")
+@RequestMapping("/com/ninggc/util/morphia")
 public class MorphiaController {
     @Resource
     private MorphiaQsAnswerDAO qsAnswerDAO;
