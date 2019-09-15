@@ -16,17 +16,20 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>dubbo-demo</module>
-        <module>es-demo</module>
-        <module>jdk-demo</module>
-        <module>message-queue-demo</module>
-        <module>my-morphia-demo</module>
-        <module>my-platform-demo</module>
-        <module>my-tomcat</module>
-        <module>spring-boot-demo</module>
+        <module>other-demo/my-morphia-demo</module>
+        <module>other-demo/dubbo-demo</module>
+        <module>other-demo/es-demo</module>
+        <module>other-demo/jdk-demo</module>
+        <module>other-demo/message-queue-demo</module>
+        <module>other-demo/my-platform-demo</module>
+        <module>other-demo/my-tomcat</module>
+        <module>other-demo/spring-boot-demo</module>
 
         <module>spring-microservice-cloud-demo/spring-config-demo</module>
         <module>spring-microservice-cloud-demo/micro-discovery-service</module>
         <module>spring-microservice-cloud-demo/micro-user-service</module>
+        <module>spring-microservice-cloud-demo/micro-manage-service</module>
+
+        <module>spring-boot-starter/ninggc-morphia-spring-boot-starter</module>
     </modules>
 </project>

@@ -1,6 +1,7 @@
+
 spring:
   application:
-    name: user-service
+    name: manage-service
   cloud:
     config:
       uri: http://localhost:8199
