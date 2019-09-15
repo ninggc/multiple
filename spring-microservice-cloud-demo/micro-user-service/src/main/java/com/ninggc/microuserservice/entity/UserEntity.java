@@ -1,5 +1,6 @@
 package com.ninggc.microuserservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ninggc.util.morphia.domain.IMorphiaPO;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
@@ -21,8 +22,10 @@ public class UserEntity implements IMorphiaPO {
    private String username;
    private String token;
    private String cookie;
-   private Date createDate;
+   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
    private Date updateDate;
+   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+   private Date createDate;
 
    @PrePersist
    public void prePersist() {
