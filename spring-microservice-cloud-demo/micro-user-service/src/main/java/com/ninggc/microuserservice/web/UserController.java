@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+//@RequestMapping("/user")
 public class UserController {
     @Autowired
     UserService userService;
@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public UserEntity login(String username, String token) {
-        return userService.login(username, token);
+    public UserEntity login(UserEntity user) {
+        return userService.login(user.getUsername(), user.getToken());
     }
 }

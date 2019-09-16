@@ -11,9 +11,9 @@ import java.util.List;
 @FeignClient(name = "user-service")
 public interface UserClient {
     @GetMapping("/get/{token}")
-    public List<UserEntity> getAll(@PathVariable String token);
+    List<UserEntity> getAll(@PathVariable String token);
 
     @PostMapping("/login")
-    public UserEntity login(String username, String token);
+    UserEntity login(UserEntity user);
 
 }
