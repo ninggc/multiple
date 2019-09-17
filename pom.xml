@@ -93,5 +93,6 @@
         <module>spring-microservice-cloud-demo/micro-discovery-service</module>
         <module>spring-microservice-cloud-demo/micro-user-service</module>
         <module>spring-microservice-cloud-demo/micro-manage-service</module>
+        <module>spring-microservice-cloud-demo/micro-gateway-service</module>
     </modules>
 </project>
