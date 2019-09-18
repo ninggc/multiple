@@ -17,22 +17,4 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @SpringBootTest(classes = SpringBootDemoApplication.class)
 @Component
 public class SpringBootDemoApplicationTest {
-
-//    @Autowired
-//    TestService testService;
-    @Autowired
-    Datastore datastore;
-    @Autowired
-    MorphiaBase<UserEntity> morphiaBase;
-
-    @Before
-    public void NotNull() {
-        Assert.assertNotNull(datastore);
-    }
-
-    @Test
-    public void test1() {
-        UserEntity po = new UserEntity();
-        morphiaBase.save(po);
-    }
 }

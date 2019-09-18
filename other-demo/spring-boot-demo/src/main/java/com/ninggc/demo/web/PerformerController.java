@@ -19,7 +19,7 @@ public class PerformerController {
 
     @GetMapping("")
     public void perform() {
-        performance.perform();
+        performance.perform("qwe", 123L);
 //        audience.performance();
     }
 }

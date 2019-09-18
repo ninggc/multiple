@@ -1,5 +1,5 @@
 package com.ninggc.demo.aspect;
 
 public interface Performance {
-    void perform();
+    void perform(String s, Long l);
 }

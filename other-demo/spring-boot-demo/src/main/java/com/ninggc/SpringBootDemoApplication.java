@@ -41,7 +41,7 @@ public class SpringBootDemoApplication implements ApplicationListener<RequestHan
 
     @Override
     public void onApplicationEvent(RequestHandledEvent event) {
-        System.out.println("app start");
+//        System.out.println("app start");
     }
 
     public static void main(String[] args) {
