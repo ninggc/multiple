@@ -23,3 +23,15 @@
     未完成
 
 ## other-demo 一些小demo
+
+1. spring-boot-demo
+
+    跟Spring有关的测试例子都在这里，很杂很乱
+    
+1. multiple-db
+
+    对各个类型的数据库的连接的实例，现在只有mongo、redis
+    
+1. jdk-demo
+
+    对jdk（基于1.8）的学习和测试实例
