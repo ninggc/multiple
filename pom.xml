@@ -79,7 +79,6 @@
     </dependencies>
 
     <modules>
-        <module>other-demo/my-morphia-demo</module>
         <module>other-demo/dubbo-demo</module>
         <module>other-demo/es-demo</module>
         <module>other-demo/jdk-demo</module>
@@ -93,5 +92,21 @@
         <module>spring-microservice-cloud-demo/micro-user-service</module>
         <module>spring-microservice-cloud-demo/micro-manage-service</module>
         <module>spring-microservice-cloud-demo/micro-gateway-service</module>
+
+        <module>learning/spring-source-code-learning</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

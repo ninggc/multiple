@@ -46,6 +46,16 @@
             <version>5.1.9.RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.morphia.morphia</groupId>
+            <artifactId>core</artifactId>
+            <version>1.5.3</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
