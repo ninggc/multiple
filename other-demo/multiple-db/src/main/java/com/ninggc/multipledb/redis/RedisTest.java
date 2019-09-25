@@ -1,13 +1,10 @@
-package com.ninggc.multipledb;
+package com.ninggc.multipledb.redis;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.Pipeline;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class RedisTest {
 
@@ -25,11 +22,10 @@ public class RedisTest {
     final Long _2M = 2000000L;
 
     void logTime() {
-        System.out.println(sdf.format(new Date()));
-//        System.out.println(System.currentTimeMillis());
+//        System.out.println(sdf.format(new Date()));
+        System.out.println(System.currentTimeMillis());
     }
 
-    @Before
     public void before() {
         logTime();
         System.out.println("初始化数据");
@@ -66,15 +62,16 @@ public class RedisTest {
         jedis.sadd(key, list.toArray(new String[0]));
     }
 
-    @Test
     public void test() {
         logTime();
         System.out.println("推到redis");
+        long start = System.currentTimeMillis();
         saddSet("one", list1);
         saddSet("two", list2);
 //        lPushList("three", list3);
 //        lPushList("four", list4);
         System.out.println("推送结束");
+        System.out.println(System.currentTimeMillis() - start);
         logTime();
 
         System.out.println("取交集");
@@ -83,8 +80,14 @@ public class RedisTest {
         logTime();
     }
 
-    @After
     public void after() {
         jedis.close();
+    }
+
+    public static void main(String[] args) {
+        RedisTest redisTest = new RedisTest();
+        redisTest.before();
+        redisTest.test();
+        redisTest.after();
     }
 }
