@@ -79,12 +79,12 @@
     </dependencies>
 
     <modules>
-        <module>other-demo/dubbo-demo</module>
-        <module>other-demo/es-demo</module>
-        <module>other-demo/jdk-demo</module>
-        <module>other-demo/my-platform-demo</module>
-        <module>other-demo/my-tomcat</module>
-        <module>other-demo/spring-boot-demo</module>
+<!--        <module>other-demo/dubbo-demo</module>-->
+<!--        <module>other-demo/es-demo</module>-->
+<!--        <module>other-demo/jdk-demo</module>-->
+<!--        <module>other-demo/my-platform-demo</module>-->
+<!--        <module>other-demo/my-tomcat</module>-->
+<!--        <module>other-demo/spring-boot-demo</module>-->
         <module>other-demo/multiple-db</module>
 
         <module>spring-microservice-cloud-demo/spring-config-demo</module>
