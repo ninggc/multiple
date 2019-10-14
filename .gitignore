@@ -18,3 +18,7 @@ target/
 bin/
 
 connect.bat
+
+# 热部署的文件
+rebel.xml
+/**/rebel.xml

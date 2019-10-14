@@ -16,7 +16,7 @@ import java.util.List;
 @SpringBootApplication
 public class MultipleDbApplication {
     public static void main(String[] args) throws InterruptedException {
-//        ConfigurableApplicationContext context = SpringApplication.run(MultipleDbApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(MultipleDbApplication.class, args);
 //        ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
 
     }
