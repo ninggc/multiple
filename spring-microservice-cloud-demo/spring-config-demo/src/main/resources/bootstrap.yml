@@ -1,5 +1,0 @@
-server:
-  port: 8199
-spring:
-  profiles:
-    active: native
