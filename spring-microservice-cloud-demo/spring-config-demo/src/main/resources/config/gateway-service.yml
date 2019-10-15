@@ -1,0 +1,31 @@
+server:
+    port: 8182
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8111/eureka/
+
+logging:
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring:
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true
+            routes:
+                -   id: user-service
+                    uri: lb://user-service
+                    predicates:
+                        - Path=/user/**
+                    filters:
+                        - RewritePath=/user/(?<path>.*), /$\{path}
+                -   id: manage-service
+                    uri: lb://manage-service
+                    predicates:
+                        - Path=/manage/**
+                    filters:
+                        - RewritePath=/manage/(?<path>.*), /$\{path}
