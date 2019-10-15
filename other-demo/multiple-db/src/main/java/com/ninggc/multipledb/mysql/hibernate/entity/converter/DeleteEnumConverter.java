@@ -10,11 +10,11 @@ public class DeleteEnumConverter implements AttributeConverter<DeleteEnum, Integ
 
     @Override
     public Integer convertToDatabaseColumn(DeleteEnum deleteEnum) {
-        return deleteEnum.value();
+        return deleteEnum == null ? null : deleteEnum.value();
     }
 
     @Override
     public DeleteEnum convertToEntityAttribute(Integer integer) {
-        return DeleteEnum.get(integer);
+        return integer == null ? null : DeleteEnum.get(integer);
     }
 }

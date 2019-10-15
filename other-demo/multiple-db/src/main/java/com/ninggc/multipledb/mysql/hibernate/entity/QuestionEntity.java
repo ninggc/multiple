@@ -19,6 +19,14 @@ import java.util.Date;
 @Entity
 @Table(name = "qs_patient", schema = "question")
 public class QuestionEntity extends CommonEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long id;
+
+    @Column(name = "create_date", nullable = false)
+    protected Date createDate;
+    @Column(name = "update_date")
+    protected Date updateDate;
 
     @Convert(converter = DeleteEnumConverter.class)
     @Column(name = "delete_flag")

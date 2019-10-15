@@ -12,6 +12,5 @@ import org.springframework.transaction.annotation.Transactional;
  * @description nothing
  */
 @Repository
-@Transactional
 public class QuestionDaoImpl extends HibernateBaseImpl<QuestionEntity> implements QuestionDao {
 }
