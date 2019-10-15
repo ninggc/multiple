@@ -1,5 +1,6 @@
 package com.ninggc.multipledb.mysql.hibernate.web;
 
+import com.ninggc.multipledb.mysql.hibernate.config.DeleteEnum;
 import com.ninggc.multipledb.mysql.hibernate.dao.QuestionDao;
 import com.ninggc.multipledb.mysql.hibernate.entity.QuestionEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -28,6 +30,9 @@ public class QuestionController {
 
     @GetMapping("/save")
     public QuestionEntity save() {
-        return questionDao.save(new QuestionEntity());
+        QuestionEntity questionEntity = new QuestionEntity();
+        questionEntity.setDeleteFlag(DeleteEnum.YES);
+        QuestionEntity save = questionDao.save(questionEntity);
+        return save;
     }
 }

@@ -5,8 +5,8 @@ package com.ninggc.multipledb.mysql.hibernate.config;
  */
 public enum DeleteEnum {
 
-    NOT(0, "未删除"),
-    YES(1, "已删除");
+    NOT(2, "未删除"),
+    YES(5, "已删除");
 
     private int delete_flag;
     private String info;

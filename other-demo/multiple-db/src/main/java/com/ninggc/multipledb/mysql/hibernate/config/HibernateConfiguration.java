@@ -1,6 +1,7 @@
 package com.ninggc.multipledb.mysql.hibernate.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.ninggc.multipledb.mysql.hibernate.entity.QuestionEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +36,7 @@ public class HibernateConfiguration {
         sessionFactoryBean.setDataSource(comboPooledDataSource());
         sessionFactoryBean.setPackagesToScan("com.ninggc.multipledb.mysql.hibernate.entity");
 
+        sessionFactoryBean.setAnnotatedClasses(QuestionEntity.class);
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         sessionFactoryBean.setHibernateProperties(hibernateProperties);
