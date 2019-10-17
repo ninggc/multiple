@@ -23,6 +23,11 @@ public class QuestionController {
     @Autowired
     private QuestionDao questionDao;
 
+    @GetMapping("/throw")
+    public void throwException() throws Exception {
+        throw new Exception("抛出异常测试");
+    }
+
     @GetMapping("/all")
     public List<QuestionEntity> allQuestion() {
         return questionDao.findAll();
