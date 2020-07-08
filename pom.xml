@@ -19,7 +19,7 @@
         <java.version>1.8</java.version>
         <gson.version>2.8.5</gson.version>
         <lombok.version>1.18.8</lombok.version>
-        <util.morphia.version>1.0.0</util.morphia.version>
+<!--        <util.morphia.version>1.0.0</util.morphia.version>-->
         <util.autogenerate.version>1.0.0</util.autogenerate.version>
     </properties>
 
@@ -82,7 +82,7 @@
     </dependencies>
 
     <modules>
-<!--        <module>other-demo/dubbo-demo</module>-->
+        <module>other-demo/dubbo-demo</module>
 <!--        <module>other-demo/es-demo</module>-->
         <module>other-demo/jdk-demo</module>
 <!--        <module>other-demo/my-platform-demo</module>-->

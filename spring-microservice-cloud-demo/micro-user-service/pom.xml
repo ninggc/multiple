@@ -46,11 +46,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.ninggc.morphia.core</groupId>
-            <artifactId>ninggc-morphia-spring-boot-starter</artifactId>
-            <version>${util.morphia.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.ninggc.morphia.core</groupId>-->
+        <!--            <artifactId>ninggc-morphia-spring-boot-starter</artifactId>-->
+        <!--            <version>${util.morphia.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>com.ninggc.starter.aop</groupId>
             <artifactId>ninggc-aop-spring-boot-starter</artifactId>

@@ -64,11 +64,11 @@
             <version>1.9.4</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.ninggc.morphia.core</groupId>
-            <artifactId>ninggc-morphia-spring-boot-starter</artifactId>
-            <version>1.0.1</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.ninggc.morphia.core</groupId>-->
+        <!--            <artifactId>ninggc-morphia-spring-boot-starter</artifactId>-->
+        <!--            <version>1.0.1</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
