@@ -11,5 +11,12 @@
     <artifactId>jdk-demo</artifactId>
     <version>1.0.0</version>
     <description>jdk demo</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+        </dependency>
+    </dependencies>
     <modelVersion>4.0.0</modelVersion>
 </project>
