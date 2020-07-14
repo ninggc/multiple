@@ -89,6 +89,7 @@
 <!--        <module>other-demo/my-tomcat</module>-->
 <!--        <module>other-demo/spring-boot-demo</module>-->
         <module>other-demo/multiple-db</module>
+        <module>other-demo/zookeeper-demo</module>
 
         <module>spring-microservice-cloud-demo/spring-config-demo</module>
         <module>spring-microservice-cloud-demo/micro-discovery-service</module>
