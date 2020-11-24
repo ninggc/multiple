@@ -98,6 +98,8 @@
         <module>spring-microservice-cloud-demo/micro-gateway-service</module>
 
         <module>learning/spring-source-code-learning</module>
+
+        <module>distribute-middleware-demo/rabbitmq-demo</module>
         <module>other-demo/io</module>
     </modules>
 
