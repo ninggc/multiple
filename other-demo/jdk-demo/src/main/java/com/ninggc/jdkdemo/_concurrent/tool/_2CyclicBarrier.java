@@ -5,24 +5,34 @@ import java.util.concurrent.CyclicBarrier;
 
 public class _2CyclicBarrier {
     public static void main(String[] args) throws InterruptedException {
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(3);
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(3, () -> {
+            String name = Thread.currentThread().getName();
+            while (true) {
+                try {
+                    Thread.sleep(1 * 1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("my name is " + name);
+            }
+        });
 
+        Thread[] threads = new Thread[4];
         for (int i = 0; i < 4; i++) {
             int finalI = i;
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
+            threads[i] = new Thread(() -> {
+                try {
                     System.out.println(finalI + "before");
-                    try {
-                        cyclicBarrier.await();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (BrokenBarrierException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println(finalI + "after");
+                    cyclicBarrier.await();
+                    // if (finalI != 0) {
+                    //     threads[finalI - 1].join();
+                    // }
+                } catch (InterruptedException | BrokenBarrierException e) {
+                    e.printStackTrace();
                 }
-            }).start();
+                System.out.println(finalI + "after");
+            }, "MyThread" + i);
+            threads[i].start();
         }
 
 

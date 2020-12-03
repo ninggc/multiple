@@ -56,11 +56,11 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.ninggc.util</groupId>
-            <artifactId>auto-generate-instance</artifactId>
-            <version>${util.autogenerate.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.ninggc.util</groupId>-->
+        <!--            <artifactId>auto-generate-instance</artifactId>-->
+        <!--            <version>${util.autogenerate.version}</version>-->
+        <!--        </dependency>-->
 
         <!-- junit4 -->
         <dependency>
@@ -100,6 +100,7 @@
         <module>learning/spring-source-code-learning</module>
 
         <module>distribute-middleware-demo/rabbitmq-demo</module>
+        <module>other-demo/jdk11-demo</module>
     </modules>
 
     <build>

@@ -1,19 +1,26 @@
 package com.ninggc.jdkdemo._concurrent.aqs;
 
-import java.util.concurrent.locks.AbstractQueuedSynchronizer;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class Main {
-    static class Sync extends AbstractQueuedSynchronizer {
-    }
-
-    public static Sync getInstance() {
-        return new Sync();
-    }
-
     public static void main(String[] args) {
-        synchronized (Main.class) {
-            ReentrantLock lock;
-        }
+        System.out.println("");
+    }
+
+    public void a() {
+        int a = 1;
+    }
+
+    public void b() {
+        int a = 1;
+        int b = 2;
+    }
+
+    public void c() {
+        int a = 1;
+        Integer c = null;
+    }
+
+    public void d() {
+        int a = 1;
+        Object d = new Object();
     }
 }

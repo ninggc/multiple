@@ -11,8 +11,10 @@ public class _1CDL {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(finalI);
-                    countDownLatch.countDown();
+                    synchronized (countDownLatch) {
+                        System.out.println(finalI);
+                        countDownLatch.countDown();
+                    }
                 }
             }).start();
         }
