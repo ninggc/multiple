@@ -6,7 +6,7 @@ public class _1CDL {
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(3);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 10; i++) {
             int finalI = i;
             new Thread(new Runnable() {
                 @Override
@@ -19,8 +19,8 @@ public class _1CDL {
             }).start();
         }
 
+        System.out.println("end");
         countDownLatch.await();
-
         System.out.println("end");
     }
 }

@@ -101,6 +101,7 @@
 
         <module>distribute-middleware-demo/rabbitmq-demo</module>
         <module>other-demo/jdk11-demo</module>
+        <module>other-demo/io</module>
     </modules>
 
     <build>
