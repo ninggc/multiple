@@ -5,6 +5,8 @@ import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
@@ -17,12 +19,14 @@ import org.springframework.messaging.Message;
 @Import(ConnectionConfiguration.class)
 @Slf4j
 public class ConsumerApplication {
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
     @RabbitListener(queues = "d")
     @RabbitHandler
     public void consumer(Message message, Channel channel) {
         byte[] payload = (byte[]) message.getPayload();
         log.info(new String(payload));
-        // channel.basicAck();
     }
 
     public static void main(String[] args) {

@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.lang.reflect.Proxy;
+
 @SpringBootApplication
 public class RabbitmqDemoApplication {
 
@@ -16,6 +18,7 @@ public class RabbitmqDemoApplication {
         // while (true) {
         //     rabbitTemplate.convertAndSend("", "test");
         // }
+        // Proxy.newProxyInstance()
     }
 
 }
