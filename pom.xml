@@ -90,6 +90,7 @@
 <!--        <module>other-demo/spring-boot-demo</module>-->
         <module>other-demo/multiple-db</module>
         <module>other-demo/zookeeper-demo</module>
+        <module>other-demo/mybatis-demo</module>
 
         <module>spring-microservice-cloud-demo/spring-config-demo</module>
         <module>spring-microservice-cloud-demo/micro-discovery-service</module>
@@ -100,6 +101,7 @@
         <module>learning/spring-source-code-learning</module>
 
         <module>distribute-middleware-demo/rabbitmq-demo</module>
+        <module>distribute-middleware-demo/redisson-demo</module>
         <module>other-demo/jdk11-demo</module>
         <module>other-demo/io</module>
     </modules>

@@ -12,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 import org.springframework.messaging.Message;
 
+import java.io.IOException;
+
 /**
  * @author 90697
  */
@@ -24,9 +26,10 @@ public class ConsumerApplication {
 
     @RabbitListener(queues = "d")
     @RabbitHandler
-    public void consumer(Message message, Channel channel) {
+    public void consumer(Message message, Channel channel) throws IOException {
         byte[] payload = (byte[]) message.getPayload();
         log.info(new String(payload));
+        channel.basicAck(1L, false);
     }
 
     public static void main(String[] args) {
