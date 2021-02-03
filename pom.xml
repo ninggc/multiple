@@ -92,6 +92,7 @@
         <module>other-demo/multiple-db</module>
         <module>other-demo/zookeeper-demo</module>
         <module>other-demo/mybatis-demo</module>
+        <module>other-demo/netty-demo</module>
 
         <!--        <module>spring-microservice-cloud-demo/spring-config-demo</module>-->
         <!--        <module>spring-microservice-cloud-demo/micro-discovery-service</module>-->
@@ -116,8 +117,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
