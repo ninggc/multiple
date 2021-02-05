@@ -2,14 +2,36 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>com.ninggc</groupId>
-        <artifactId>multiple</artifactId>
-        <version>0.1.0</version>
-        <relativePath/>
-    </parent>
+    <!--    <parent>-->
+    <!--        <groupId>com.ninggc</groupId>-->
+    <!--        <artifactId>multiple</artifactId>-->
+    <!--        <version>0.1.0</version>-->
+    <!--        <relativePath/>-->
+    <!--    </parent>-->
     <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ninggc</groupId>
     <artifactId>jdk1.7-demo</artifactId>
     <version>1.0.0</version>
     <description>jdk demo</description>
+
+    <properties>
+        <java.version>1.7</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <!-- 编译插件 - End -->
+        </plugins>
+    </build>
 </project>
