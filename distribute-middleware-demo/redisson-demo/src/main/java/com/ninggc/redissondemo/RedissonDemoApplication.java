@@ -9,8 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 
-import java.util.concurrent.CountDownLatch;
-
 @SpringBootApplication
 public class RedissonDemoApplication implements ApplicationListener<ContextRefreshedEvent> {
 	@Autowired
@@ -24,22 +22,24 @@ public class RedissonDemoApplication implements ApplicationListener<ContextRefre
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		RLock lock = redissonClient.getLock("l");
-		CountDownLatch countDownLatch = new CountDownLatch(1);
-
-		new Thread(() -> {
-			lock.tryLock();
-			System.out.println("t1 get lock");
-			countDownLatch.countDown();
-			while (true) {
-				try {
-					Thread.sleep(1 * 1000);
-				} catch (InterruptedException e) {
-					break;
-				}
-			}
-			System.out.println("t1 unlock");
-			lock.unlock();
-		}).start();
+		// CountDownLatch countDownLatch = new CountDownLatch(1);
+		//
+		// new Thread(() -> {
+		// 	lock.tryLock();
+		// 	System.out.println("t1 get lock");
+		// 	countDownLatch.countDown();
+		// 	try {
+		// 		while (true) {
+		// 			Thread.sleep(1 * 1000);
+		// 		}
+		// 	} catch (InterruptedException e) {
+		// 		e.printStackTrace();
+		// 	} finally {
+		// 		System.out.println("exit");
+		// 	}
+		// 	System.out.println("t1 unlock");
+		// 	lock.unlock();
+		// }).start();
 
 		// countDownLatch.await();
 		// while (true) {
