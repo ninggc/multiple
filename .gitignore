@@ -13,6 +13,9 @@ target/
 
 # VSCode生成的配置文件
 .settings
+.project
+.classpath
+.factorypath
 
 # 不知道什么玩意儿
 bin/
