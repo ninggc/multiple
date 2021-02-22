@@ -1,8 +1,6 @@
 import org.I0Itec.zkclient.ZkClient;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class MainTest {
 
     @Test

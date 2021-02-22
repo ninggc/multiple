@@ -4,7 +4,6 @@ import com.ninggc.multipledb.mysql.hibernate.dao.QuestionDao;
 import com.ninggc.multipledb.mysql.hibernate.entity.QuestionEntity;
 import com.ninggc.util.hibernatebase.HibernateBaseImpl;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Ninggc

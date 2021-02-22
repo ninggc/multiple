@@ -106,6 +106,8 @@
         <module>distribute-middleware-demo/redisson-demo</module>
         <module>other-demo/jdk11-demo</module>
         <module>other-demo/io</module>
+
+        <module>spring-cloud-demo</module>
     </modules>
 
     <build>

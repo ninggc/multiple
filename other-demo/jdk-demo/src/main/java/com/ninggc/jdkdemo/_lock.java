@@ -9,39 +9,29 @@ public class _lock {
     static ReentrantLock lock2 = new Lock("l2");
 
     public static void main(String[] args) {
-        Thread t1 = new Thread("test1") {
-            @Override
-            public void run() {
-                super.run();
-                lock1.lock();
-                try {
-                    Thread.sleep(1 * 1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                lock2.lock();
-                lock1.unlock();
-                lock2.unlock();
-            }
-        };
+        Thread t1 = newThread("test1");
         t1.start();
 
-        Thread t2 = new Thread("test2") {
+        Thread t2 = newThread("test2");
+        t2.start();
+    }
+
+    private static Thread newThread(String tName) {
+        return new Thread(tName) {
             @Override
             public void run() {
                 super.run();
-                lock2.lock();
+                lock1.lock();
                 try {
                     Thread.sleep(1 * 1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                lock1.lock();
-                lock2.unlock();
+                lock2.lock();
                 lock1.unlock();
+                lock2.unlock();
             }
         };
-        t2.start();
     }
 
     static class Lock extends ReentrantLock {

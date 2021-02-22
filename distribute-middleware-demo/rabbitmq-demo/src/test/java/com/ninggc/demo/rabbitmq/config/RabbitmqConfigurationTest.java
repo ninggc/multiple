@@ -3,10 +3,8 @@ package com.ninggc.demo.rabbitmq.config;
 import com.rabbitmq.client.*;
 import org.junit.Test;
 import org.springframework.amqp.rabbit.connection.Connection;
-import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class RabbitmqConfigurationTest {
     public Connection getConnection() {
