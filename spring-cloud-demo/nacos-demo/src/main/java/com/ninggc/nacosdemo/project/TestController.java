@@ -5,12 +5,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @RequestMapping("/test")
 @RestController
 public class TestController {
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        System.out.println(localDate.toString());
+        System.out.println(LocalDateTime.now());
+    }
+
     @GetMapping
     public void String() {
-        return String.valueOf(new LocalDate());
+        LocalDate localDate = LocalDate.now();
+        localDate.toString();
     }
 }
