@@ -14,6 +14,10 @@ import org.springframework.messaging.Message;
 
 import java.io.IOException;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author 90697
  */
@@ -34,5 +38,8 @@ public class ConsumerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ConsumerApplication.class, args);
+        List<Integer> integers = Arrays.asList(1);
+        ArrayList<Object> objects = new ArrayList<>();
+        integers.toArray();
     }
 }
