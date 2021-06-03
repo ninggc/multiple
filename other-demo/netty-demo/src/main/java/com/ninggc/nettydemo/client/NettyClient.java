@@ -1,6 +1,6 @@
 package com.ninggc.nettydemo.client;
 
-import com.ninggc.nettydemo.server.NettyServer;
+import com.ninggc.nettydemo.server.DiscardServer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -33,7 +33,7 @@ public class NettyClient {
             log.info("netty client start");
 
             // 启动客户端去连接服务器端
-            ChannelFuture channelFuture = bootstrap.connect("localhost", NettyServer.PORT);
+            ChannelFuture channelFuture = bootstrap.connect("localhost", 8080);
 
             // 对关闭通道进行监听
             channelFuture.channel().closeFuture().sync();

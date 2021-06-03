@@ -6,6 +6,7 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
+import io.netty.util.ReferenceCountUtil;
 import io.netty.util.concurrent.EventExecutorGroup;
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,9 +22,15 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf byteBuf = (ByteBuf) msg;
-        log.info("received msg from server, msg = {}", byteBuf.toString(CharsetUtil.UTF_8));
-        log.info("server address is {}", ctx.channel().remoteAddress());
+        try {
+            ByteBuf byteBuf = (ByteBuf) msg;
+
+            log.info("received msg from server, msg = {}", byteBuf.toString(CharsetUtil.UTF_8));
+            log.info("server address is {}", ctx.channel().remoteAddress());
+            byteBuf.release();
+        } finally {
+            ReferenceCountUtil.release(msg);
+        }
     }
 
     @Override
