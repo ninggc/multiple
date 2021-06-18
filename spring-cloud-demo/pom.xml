@@ -55,6 +55,7 @@
 
     <modules>
         <module>nacos-demo</module>
+        <module>seata-demo</module>
     </modules>
 
     <build>

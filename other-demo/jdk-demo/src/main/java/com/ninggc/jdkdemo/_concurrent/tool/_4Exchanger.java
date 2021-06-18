@@ -10,10 +10,13 @@ public class _4Exchanger {
         for (int i = 0; i < 2; i++) {
             int finalI = i;
             new Thread(new Runnable() {
-                @lombok.SneakyThrows
                 @Override
                 public void run() {
-                    exchanger.exchange(finalI);
+                    try {
+                        exchanger.exchange(finalI);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }).start();
         }

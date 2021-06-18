@@ -12,7 +12,7 @@ public class SortTest {
     @Test
     public  void main() {
         ArrayList<Sort.Number> numbers = new ArrayList<>();
-        numbers.sort(Comparator.comparing(Sort.Number::getValue));
+//        numbers.sort(Comparator.comparing(Sort.Number::getValue));
 
         numbers.stream();
         File[] files = new File("").listFiles(new FileFilter() {
