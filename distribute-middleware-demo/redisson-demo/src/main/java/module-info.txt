@@ -1,0 +1,10 @@
+open module redissondemo {
+    requires java.base;
+    requires lombok;
+    requires redisson;
+    requires spring.beans;
+    requires spring.boot;
+    requires spring.boot.autoconfigure;
+    requires spring.context;
+    requires com.fasterxml.jackson.core;
+}

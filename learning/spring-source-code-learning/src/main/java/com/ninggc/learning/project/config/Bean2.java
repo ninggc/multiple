@@ -1,7 +1,6 @@
 package com.ninggc.learning.project.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Component;
 

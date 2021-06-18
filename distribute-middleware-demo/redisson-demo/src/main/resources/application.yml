@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  # 如果是集群，需要进行redisson相关配置，生产环境需要开路设置密码
+  # 分布式锁， 接口幂等性均可使用redission处理
+  redis:
+    database: 10
+    host: wonders.ninggc.cn
+    port: 6379
+    timeout: 10000

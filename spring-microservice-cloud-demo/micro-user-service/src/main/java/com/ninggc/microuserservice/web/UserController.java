@@ -10,8 +10,11 @@ import java.util.List;
 @RestController
 //@RequestMapping("/user")
 public class UserController {
-    @Autowired
-    UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/get/{token}")
     public List<UserEntity> getAll(@PathVariable String token) {
