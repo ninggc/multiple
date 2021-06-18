@@ -11,8 +11,22 @@
     </parent>
     <artifactId>other-demo</artifactId>
     <version>0.1.0</version>
-    <name>multiple</name>
+    <name>other-demo</name>
     <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>dubbo-demo</module>
+        <module>es-demo</module>
+        <module>jdk1.7-demo</module>
+        <module>jdk-demo</module>
+        <!--        <module>my-platform-demo</module>-->
+        <!--        <module>my-tomcat</module>-->
+        <!--        <module>spring-boot-demo</module>-->
+        <module>multiple-db</module>
+        <module>zookeeper-demo</module>
+        <module>mybatis-demo</module>
+        <module>netty-demo</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -73,10 +87,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <modules>
-        <module>json-demo</module>
-    </modules>
 
     <build>
         <pluginManagement>
