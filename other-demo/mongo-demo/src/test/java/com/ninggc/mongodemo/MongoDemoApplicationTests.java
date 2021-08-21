@@ -1,10 +1,10 @@
-package cn.ninggc.cn.mongodemo;
+package com.ninggc.mongodemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MongoDemoApplicationTests {
+public class MongoDemoApplicationTests {
 
     @Test
     void contextLoads() {

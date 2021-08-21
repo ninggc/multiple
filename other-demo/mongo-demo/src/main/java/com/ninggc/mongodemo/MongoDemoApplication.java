@@ -1,6 +1,6 @@
-package cn.ninggc.cn.mongodemo;
+package com.ninggc.mongodemo;
 
-import cn.ninggc.cn.mongodemo.service.TestService;
+import com.ninggc.mongodemo.service.TestService;
 import javax.annotation.Resource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

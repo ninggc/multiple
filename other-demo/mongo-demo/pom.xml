@@ -8,7 +8,7 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>cn.ninggc.cn</groupId>
+    <groupId>com.ninggc</groupId>
     <artifactId>mongo-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mongo-demo</name>

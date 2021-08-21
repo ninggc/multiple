@@ -7,5 +7,8 @@ spring:
   data:
     mongodb:
       host: 192.168.1.201
-      database: metadata_test8
+      database: ninggc
       transactionEnabled: true
+
+mongo:
+  collection-name: test1

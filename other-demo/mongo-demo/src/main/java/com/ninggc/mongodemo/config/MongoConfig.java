@@ -1,4 +1,4 @@
-package cn.ninggc.cn.mongodemo.config;
+package com.ninggc.mongodemo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

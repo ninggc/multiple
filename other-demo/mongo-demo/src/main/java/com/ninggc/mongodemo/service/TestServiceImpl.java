@@ -1,7 +1,9 @@
-package cn.ninggc.cn.mongodemo.service;
+package com.ninggc.mongodemo.service;
 
 import java.util.HashMap;
+import java.util.Map;
 import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +20,8 @@ public class TestServiceImpl implements TestService {
 
     @Resource
     private MongoTemplate mongoTemplate;
+    @Value("${mongo.collectionName}")
+    private String collectionName;
     // @Resource
     // private TransactionTemplate transactionTemplate;
 
@@ -32,14 +36,13 @@ public class TestServiceImpl implements TestService {
         //     }
         // });
 
-        HashMap<Object, Object> objectToSave = new HashMap<>();
+        Map<Object, Object> objectToSave = new HashMap<>();
         objectToSave.put("a", 1);
-        String cName = "ninggc-tx";
-        mongoTemplate.insert(objectToSave, cName);
+        mongoTemplate.insert(objectToSave, collectionName);
 
         HashMap<Object, Object> map2 = new HashMap<>();
         map2.put("map2", 1);
-        mongoTemplate.insert(map2, "ninggc");
+        mongoTemplate.insert(map2, collectionName);
 
         if (false) {
             throw new RuntimeException("e");

@@ -1,4 +1,4 @@
-package cn.ninggc.cn.mongodemo.service;
+package com.ninggc.mongodemo.service;
 
 /**
  * @description: TODO
