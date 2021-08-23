@@ -73,6 +73,7 @@
 
 
     <modules>
+        <module>distribute-middleware-demo</module>
         <module>other-demo</module>
 
         <module>learning/spring-source-code-learning</module>

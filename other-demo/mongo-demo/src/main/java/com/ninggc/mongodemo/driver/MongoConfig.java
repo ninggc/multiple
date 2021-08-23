@@ -7,6 +7,9 @@ import com.mongodb.client.MongoClients;
 
 public class MongoConfig {
 
+    /**
+     * mongoClient用来生成session
+     */
     public static MongoClient mongoClient;
 
     static {

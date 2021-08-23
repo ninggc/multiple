@@ -19,11 +19,7 @@
         <module>es-demo</module>
         <module>jdk1.7-demo</module>
         <module>jdk-demo</module>
-        <!--        <module>my-platform-demo</module>-->
-        <!--        <module>my-tomcat</module>-->
-        <!--        <module>spring-boot-demo</module>-->
         <module>mongo-demo</module>
-        <module>multiple-db</module>
         <module>zookeeper-demo</module>
         <module>mybatis-demo</module>
         <module>netty-demo</module>

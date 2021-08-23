@@ -1,7 +1,10 @@
 package com.ninggc.demo.rabbitmq.comsumer;
 
-import com.ninggc.demo.rabbitmq.config.ConnectionConfiguration;
 import com.rabbitmq.client.Channel;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -9,20 +12,12 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 import org.springframework.messaging.Message;
-
-import java.io.IOException;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author 90697
  */
 @SpringBootApplication
-@Import(ConnectionConfiguration.class)
 @Slf4j
 public class ConsumerApplication {
     @Autowired

@@ -2,6 +2,7 @@ package com.ninggc.mongodemo.driver;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
+import com.mongodb.client.ClientSession;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,5 +30,16 @@ class MongoConfigTest {
 
         System.out.println(String.join(", ", mongoClient.listDatabaseNames()));
 
+    }
+
+    @Test
+    void txTest() {
+        ClientSession clientSession = mongoClient.startSession();
+        try {
+            clientSession.startTransaction();
+            clientSession.commitTransaction();
+        } catch (RuntimeException e) {
+            clientSession.abortTransaction();
+        }
     }
 }
