@@ -1,3 +1,6 @@
 spring:
   rabbitmq:
     host: ninggc.cn
+    listener:
+      simple:
+        acknowledge-mode: manual

@@ -3,13 +3,12 @@ package com.ninggc.demo.rabbitmq.producer;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.ConfirmListener;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class basic {
+public class Basic {
     @Autowired
     Channel channel;
 
