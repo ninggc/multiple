@@ -6,7 +6,6 @@
         <groupId>com.ninggc</groupId>
         <artifactId>other-demo</artifactId>
         <version>0.1.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>json-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>

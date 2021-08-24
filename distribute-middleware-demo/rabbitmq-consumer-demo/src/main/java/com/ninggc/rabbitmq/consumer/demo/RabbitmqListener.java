@@ -37,7 +37,7 @@ public class RabbitmqListener implements ApplicationListener<ContextRefreshedEve
         String msg = new String(payload);
         log.info("received msg {}", msg);
 
-        channel.basicAck(tag, false);
+        channel.basicAck(tag, true);
         // Thread.sleep(1 * 1000);
     }
 }

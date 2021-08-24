@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <artifactId>rabbitmq-consumer-demo</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.springframework.boot</groupId>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+
+        <dependency>
+            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+
+        <dependency>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <description>rabbitmq-consumer-demo</description>
+    <modelVersion>4.0.0</modelVersion>
+    <name>rabbitmq-consumer-demo</name>
+    <parent>
+        <artifactId>distribute-middleware-demo</artifactId>
+        <groupId>com.ninggc</groupId>
+        <version>0.1.0</version>
+    </parent>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <version>0.0.1-SNAPSHOT</version>
+
+</project>

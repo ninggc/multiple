@@ -7,7 +7,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.8.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ninggc</groupId>
     <artifactId>multiple</artifactId>
@@ -25,6 +24,13 @@
         <jackson.version>2.12.3</jackson.version>
         <junit5.version>5.7.0</junit5.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <artifactId>lombok</artifactId>
+            <groupId>org.projectlombok</groupId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>

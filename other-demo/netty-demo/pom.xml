@@ -4,9 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.ninggc</groupId>
-        <artifactId>multiple</artifactId>
+        <artifactId>other-demo</artifactId>
         <version>0.1.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>netty-demo</artifactId>

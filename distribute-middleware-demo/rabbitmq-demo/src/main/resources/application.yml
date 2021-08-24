@@ -1,6 +1,12 @@
 spring:
   rabbitmq:
     host: ninggc.cn
+    # 发送者开启confirm确认机制
+    publisher-confirms: true
+    # 发送者开启return确认机制
+    publisher-returns: true
     listener:
       simple:
         acknowledge-mode: manual
+    template:
+      mandatory: true

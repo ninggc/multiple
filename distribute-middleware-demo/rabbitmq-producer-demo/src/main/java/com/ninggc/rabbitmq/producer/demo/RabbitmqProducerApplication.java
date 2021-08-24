@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * @author 90697
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.ninggc.demo.rabbitmq.producer", "com.ninggc.demo.rabbitmq.common"})
 // @Import(ConnectionConfiguration.class)
 public class RabbitmqProducerApplication {
 

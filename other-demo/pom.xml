@@ -7,7 +7,6 @@
         <groupId>com.ninggc</groupId>
         <artifactId>multiple</artifactId>
         <version>0.1.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>other-demo</artifactId>
     <version>0.1.0</version>

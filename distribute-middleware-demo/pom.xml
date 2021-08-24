@@ -5,17 +5,23 @@
     <description>Demo project for Spring Boot</description>
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>rabbitmq-demo</module>
+<!--        <module>rabbitmq-consumer-demo</module>-->
+<!--        <module>rabbitmq-producer-demo</module>-->
     </modules>
     <name>distribute-middleware-demo</name>
     <packaging>pom</packaging>
+    <version>0.1.0</version>
+
     <parent>
         <artifactId>multiple</artifactId>
         <groupId>com.ninggc</groupId>
-        <relativePath/>
-        <version>0.1.0</version> <!-- lookup parent from repository -->
+        <version>0.1.0</version>
     </parent>
 
-    <version>0.1.0</version>
-
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-amqp</artifactId>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
 </project>

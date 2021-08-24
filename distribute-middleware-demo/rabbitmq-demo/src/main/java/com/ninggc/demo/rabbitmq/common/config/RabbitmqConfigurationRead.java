@@ -1,4 +1,4 @@
-// package com.ninggc.demo.rabbitmq.config;
+package com.ninggc.demo.rabbitmq.common.config;// package com.ninggc.demo.rabbitmq.common.config;
 //
 // import com.ninggc.demo.rabbitmq.conveter.TulingImageConverter;
 // import com.ninggc.demo.rabbitmq.conveter.TulingWordConverter;

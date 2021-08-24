@@ -1,11 +1,9 @@
 package com.ninggc.demo.rabbitmq.producer;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
@@ -18,15 +16,24 @@ import org.springframework.stereotype.Component;
 public class ApplicationStartupListener implements ApplicationListener<ContextRefreshedEvent> {
 
     private final RabbitTemplate rabbitTemplate;
+    private final CustomConfirmCallback customConfirmCallback;
+    private final CustomReturnCallback customReturnCallback;
+    private final ObjectJsonMessageConverter objectJsonMessageConverter;
 
     @SneakyThrows
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        AtomicInteger at = new AtomicInteger();
 
-        while (true) {
-            String msg = "toDirectExchange:hello " + at.getAndIncrement();
-            rabbitTemplate.send("direct", "tod", new Message(msg.getBytes(), new MessageProperties()));
+        long l = System.currentTimeMillis();
+        rabbitTemplate.setMandatory(true);
+        rabbitTemplate.setConfirmCallback(customConfirmCallback);
+        rabbitTemplate.setReturnCallback(customReturnCallback);
+        rabbitTemplate.setMessageConverter(objectJsonMessageConverter);
+
+        for (int i = 0; i < 5; i++) {
+            String msg = "toDirectExchange:hello " + l;
+            // rabbitTemplate.send("direct", "-tod", new Message(msg.getBytes(), new MessageProperties()));
+            rabbitTemplate.convertAndSend("direct", "tod", new MqEvent(LocalDateTime.now()));
             log.info("send success {}", msg);
             // rabbitTemplate.convertAndSend("tod", "hello");
             Thread.sleep(1 * 1000);

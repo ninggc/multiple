@@ -6,7 +6,6 @@
         <groupId>com.ninggc</groupId>
         <artifactId>multiple</artifactId>
         <version>0.1.0</version>
-        <relativePath/>
     </parent>
     <artifactId>micro-user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
