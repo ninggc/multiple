@@ -4,9 +4,8 @@ import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DefaultConsumer;
 import com.rabbitmq.client.Envelope;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.io.IOException;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class basic {
     @Autowired
