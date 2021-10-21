@@ -6,7 +6,7 @@ spring:
     name: mongo-demo
   data:
     mongodb:
-      host: 192.168.1.201
+      host: mongo
       database: ninggc
       transactionEnabled: true
 
