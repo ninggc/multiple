@@ -1,4 +1,4 @@
-package com.ninggc.demo.rabbitmq.producer;
+package com.ninggc.rabbitmq.producer.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;

@@ -120,7 +120,7 @@
             <groupId>org.projectlombok</groupId>
         </dependency>
         <dependency>
-            <artifactId>junit-jupiter</artifactId>
+            <artifactId>junit-jupiter-engine</artifactId>
             <groupId>org.junit.jupiter</groupId>
             <scope>test</scope>
         </dependency>
