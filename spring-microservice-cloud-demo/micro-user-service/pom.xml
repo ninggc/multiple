@@ -6,7 +6,6 @@
         <groupId>com.ninggc</groupId>
         <artifactId>multiple</artifactId>
         <version>0.1.0</version>
-        <relativePath/>
     </parent>
     <artifactId>micro-user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -39,22 +38,22 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>5.1.9.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>com.ninggc.morphia.core</groupId>-->
+        <!--            <artifactId>ninggc-morphia-spring-boot-starter</artifactId>-->
+        <!--            <version>${util.morphia.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>dev.morphia.morphia</groupId>
-            <artifactId>core</artifactId>
-            <version>1.5.3</version>
-            <scope>compile</scope>
+            <groupId>com.ninggc.starter.aop</groupId>
+            <artifactId>ninggc-aop-spring-boot-starter</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

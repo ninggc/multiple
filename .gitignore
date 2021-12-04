@@ -14,8 +14,15 @@ target/
 # VSCode生成的配置文件
 .settings
 .project
+.classpath
+.factorypath
 
 # 不知道什么玩意儿
 bin/
 
 connect.bat
+
+# 热部署的文件
+rebel.xml
+/**/rebel.xml
+/**/.rebel.xml.bak

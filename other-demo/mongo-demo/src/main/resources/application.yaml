@@ -1,0 +1,14 @@
+server:
+  port:
+    8080
+spring:
+  application:
+    name: mongo-demo
+  data:
+    mongodb:
+      host: mongo
+      database: ninggc
+      transactionEnabled: true
+
+mongo:
+  collection-name: test1
