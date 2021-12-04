@@ -18,9 +18,9 @@
         <module>es-demo</module>
         <module>jdk1.7-demo</module>
         <module>jdk-demo</module>
-        <module>mongo-demo</module>
+<!--        <module>mongo-demo</module>-->
         <module>zookeeper-demo</module>
-        <module>mybatis-demo</module>
+<!--        <module>mybatis-demo</module>-->
         <module>netty-demo</module>
     </modules>
 

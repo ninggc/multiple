@@ -101,6 +101,12 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <artifactId>junit-jupiter</artifactId>
+                <groupId>org.junit.jupiter</groupId>
+                <version>${junit5.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
