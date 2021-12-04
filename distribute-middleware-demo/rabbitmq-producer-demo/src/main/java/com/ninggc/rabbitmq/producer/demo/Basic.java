@@ -1,4 +1,4 @@
-package com.ninggc.demo.rabbitmq.producer;
+package com.ninggc.rabbitmq.producer.demo;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;

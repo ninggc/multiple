@@ -1,4 +1,4 @@
-package com.ninggc.demo.rabbitmq.producer;
+package com.ninggc.rabbitmq.producer.demo;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

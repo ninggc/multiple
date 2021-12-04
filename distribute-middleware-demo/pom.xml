@@ -4,10 +4,12 @@
     <artifactId>distribute-middleware-demo</artifactId>
     <description>Demo project for Spring Boot</description>
     <modelVersion>4.0.0</modelVersion>
-    <modules>
-<!--        <module>rabbitmq-consumer-demo</module>-->
-<!--        <module>rabbitmq-producer-demo</module>-->
-    </modules>
+    <dependencies>
+        <dependency>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+    </dependencies>
     <name>distribute-middleware-demo</name>
     <packaging>pom</packaging>
     <version>0.1.0</version>
@@ -18,10 +20,9 @@
         <version>0.1.0</version>
     </parent>
 
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-amqp</artifactId>-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
+    <modules>
+        <module>rabbitmq-demo</module>
+        <module>rabbitmq-consumer-demo</module>
+        <module>rabbitmq-producer-demo</module>
+    </modules>
 </project>

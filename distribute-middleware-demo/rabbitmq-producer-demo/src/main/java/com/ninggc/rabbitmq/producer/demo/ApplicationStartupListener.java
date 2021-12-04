@@ -1,5 +1,7 @@
-package com.ninggc.demo.rabbitmq.producer;
+package com.ninggc.rabbitmq.producer.demo;
 
+import com.ninggc.demo.rabbitmq.common.model.MqEvent;
+import com.ninggc.demo.rabbitmq.common.model.ObjectJsonMessageConverter;
 import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
